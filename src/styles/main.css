@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Skip to Main Content */
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  border-radius: 15px;
+  text-decoration: none;
+  left: 2%;
+  font-weight: bold;
+  background-color: #fff3f4;
+  color: #f2613f;
+  padding: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  z-index: 400;
+  transition: all 0.5s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+.skip-link:hover + .header__title {
+  margin-left: 20%;
+}
+
+/*
+ * Header
+ *
+ */
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #f2613f;
+  padding: 10px;
+}
+
+app-bar {
+  max-width: 70%;
+  white-space: nowrap;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 4px 0px;
+}
+
+.logo_brand {
+  display: flex;
+  transition: margin-left 0.5s ease-in-out;
+  position: fixed;
+}
+.logo_brand i {
+  font-size: 25px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  padding: 15px 18px;
+  color: #fff;
+}
+.header__title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+#menu {
+  font-size: 31px;
+  color: #fff;
+  margin-left: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  display: none;
+}
+#menu:focus {
+  outline: auto;
+}
+/*
+ * Navigation
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: end;
+}
+
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  width: 14%;
+  min-height: 44px;
+  min-width: 44px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+}
+.nav__list .nav__item a {
+  display: inline-block !important;
+}
+.nav a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+/*
+ * hero-bar
+ */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: url('../public/images/heros_resized/hero-image_2-max.jpg');
+  background-position: center;
+}
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 7%;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 5px 5px #f2613f;
+  letter-spacing: 0.025em;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 30px;
+  font-size: 23px;
+  font-weight: 500;
+  text-shadow: 2px 2px #000;
+  line-height: 2;
+}
+
+/*
+ * main
+ */
+/* Restaurant Content */
+/* Restaurant Content */
+
+.content {
+  max-width: 58rem;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.label_content {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'poppins', sans-serif;
+}
+
+/*
+* Restaurant
+*/
+
+.restaurants,
+.trendy-restaurants {
+  margin: 35px auto auto;
+  text-align: left;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.content .explore {
+  margin-top: 50px;
+}
+.restaurant-not-found{
+  position: absolute;
+  margin: 0 auto;
+}
+/*
+* Restaurant item
+*/
+
+.restaurant-item {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-item:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-item img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.item_content {
+  padding: 16px;
+}
+
+.item_content i {
+  color: #ffcc00;
+  font-size: 17px;
+}
+
+.item_content span {
+  margin-top: 2px;
+  font-size: 17px;
+}
+
+.locate {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #000;
+  font-size: 12px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  font-weight: 900;
+  margin-top: 17px;
+  position: absolute;
+}
+
+.restaurant-item_image {
+  width: 100%;
+}
+
+.item_rating {
+  font-weight: 620;
+  font-size: 15px;
+}
+
+.item_rating i {
+  margin-right: 5px;
+}
+
+.item_title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.item_title:hover {
+  opacity: 0.5;
+  color: #f2613f;
+}
+
+.item_desc {
+  font-size: 15px;
+  margin-top: 17px;
+  line-height: 1.7em;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  text-align: justify;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.checkResto {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 700;
+  padding: 13px 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f2613f;
+  color: #fff;
+  width: 100%;
+}
+/* 
+* Detail Pages
+*/
+.detail_container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Restaurant Item */
+.rest-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-img img {
+  border-radius: 10px;
+  height: 100%;
+  width: 90%;
+}
+
+.restaurant-name {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.restaurant-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.restaurant-rating i {
+  color: gold;
+  margin-right: 5px;
+}
+
+.restaurant-address {
+  margin-bottom: 10px;
+}
+
+.categories,
+.foods,
+.drinks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.categories .category,
+.foods .food,
+.drinks .drink {
+  background-color: #f2613f;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Restaurant Description */
+.restaurant-description {
+  margin-bottom: 20px;
+}
+
+.menu {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+/* Review Section */
+.review-section {
+  margin-bottom: 20px;
+}
+
+.review-section h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.card-reviews {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.review-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+.reviewer-info i {
+  color: #f2613f;
+  font-size: 40px;
+  margin-right: 15px;
+}
+
+.review-desc {
+  margin-left: 55px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: max-content;
+  color: #666666;
+  border: 1px solid #9ca3af;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.search-container i {
+  position: absolute;
+  left: 5px;
+  font-size: 14px;
+  color: #666666;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#searchInput {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  padding: 14px 55px;
+  font-size: 14px;
+  padding-right: 0px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  border-top-right-radius: 5px;
+}
+
+/* Add Review Form */
+.add-review-form {
+  max-width: 40%;
+  margin-bottom: 25px;
+  background-color: #f2613f;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.add-review-form > label {
+  margin: 20px;
+}
+
+.add-review-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.add-review-form label,
+.add-review-form textarea {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  margin-left: -65%;
+  font-weight: 800;
+}
+
+.add-review-form input,
+.add-review-form textarea {
+  min-width: 44px;
+  min-height: 44px;
+  width: 80%;
+  padding: 5px;
+  color: #555;
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-review-form button {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #ff8a08;
+  color: #fff;
+  border: 1px solid transparent;
+  margin: 20px 0;
+  border-radius: 5px;
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.add-review-form button:hover {
+  background-color: white;
+  color: #f2613f;
+  border: 1px solid #f2613f;
+}
+.review-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.reviewer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fa-circle-user {
+  font-size: 40px;
+  color: #f2613f;
+  margin-right: 10px;
+}
+
+.reviewer p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-desc p {
+  font-size: 18px;
+  color: black;
+}
+
+button.like {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border: 1px solid red;
+  padding: 10px;
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.like i {
+  color: red;
+}
+
+/* Styles for the liked button */
+button.liked {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.liked i {
+  color: white;
+}
+/* Favorites Pages */
+#content-fav {
+  max-width: 50rem;
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Additional hover effect */
+button.like:hover,
+button.liked:hover {
+  opacity: 0.8;
+}
+/* 
+** Error Pages 
+*/
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.error-content {
+  max-width: 400px;
+}
+
+.error-title {
+  font-size: 48px;
+  color: #ff4c4c;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.error-description {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.refresh-instruction {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 20px;
+}
+
+.refresh-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  min-height: 44px;
+  min-width: 44px;
+  color: #ffffff;
+  background-color: #ff4c4c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover {
+  background-color: #ff1a1a;
+}
+
+/*
+ * Footer-Bar
+ */
+.footer-bar {
+  background-color: #f2613f;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+.footer-bar p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+}
+loader-component {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  color: #f2613f;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  z-index: 999;
+}
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
